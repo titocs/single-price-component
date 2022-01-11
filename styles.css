@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+/* font-family: 'Karla', sans-serif; */
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    box-sizing: border-box;
+    background-color: var(--Light-Gray);
+    font-family: 'Karla', sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main {
+    margin: 30px;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    -webkit-box-shadow: 0px 11px 25px -11px rgba(105,105,105,0.7); 
+    box-shadow: 0px 11px 25px -11px rgba(105,105,105,0.7);
+}
+
+.content {
+    padding: 20px;
+}
+
+.top-content {
+    background-color: white;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.top-content .content h1 {
+    color: #009191;
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+.top-content .content h2 {
+    color: #a9cb13;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.top-content .content p {
+    color: var(--Grayish-Blue);
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-content {
+    flex-basis: 50%;
+    background-color: var(--Cyan);
+}
+
+.left-content .content > h1, .right-content .content h1 {
+    color: white;
+}
+
+.left-content .content p{
+    color: white;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.left-content .content > h1, .right-content .content h1 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.price {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.price > h1 {
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+}
+
+span {
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.button-signup {
+    background-color: var(--Bright-Yellow);
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 15px 30px -13px #696969; 
+    box-shadow: 0px 15px 30px -13px #696969;
+    margin-bottom: 5px;
+}
+
+.button-signup > h1 {
+    padding: 15px;
+    text-align: center;
+}
+
+.button-signup:hover {
+    cursor: pointer;
+}
+
+.right-content {
+    flex-basis: 50%;
+    background-color: hsl(179deg 59% 47%);
+    border-radius: 0px 0px 5px 5px;
+}
+
+ul {
+    margin-bottom: 5px;
+}
+
+ul li {
+    color: var(--Light-Gray);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 768px) {
+    body {
+        text-align: center;
+    }
+
+    .price {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        text-align: left;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    main {
+        margin: 100px 130px;
+    }
+
+    .price {
+        justify-content: left;
+    }
+
+    .bottom-content {
+        flex-direction: row;
+    }
+
+    .left-content {
+        border-radius: 0px 0px 0px 5px;
+    }
+
+    .right-content {
+        border-radius: 0px 0px 5px 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin: 15% 30%;
+    }
+
+    .top-content .content h2 {
+        margin-bottom: 10px;
+    }
+
+    .left-content .content p {
+        margin-bottom: 35px;
+    }
+
+    .button-signup > h1 {
+        padding: 17px;
+    }
+}
